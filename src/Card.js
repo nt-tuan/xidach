@@ -8,7 +8,7 @@ const suitMap = {
 };
 
 const getSrc = (card) => {
-  return `/cards/${card.symbol}_of_${suitMap[card.suit]}.svg`;
+  return `/cards/${card.symbol.toLowerCase()}_of_${suitMap[card.suit]}.svg`;
 };
 export const Card = ({ card, onClick }) => {
   const isDisabled = card.handed || card.revealed;
